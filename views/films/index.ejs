@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Catalogue</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">Catalogue de film</h1>
+        <a href="/films/new" class="btn btn-success">Rajouter un film</a>
+
+        <% films.forEach(films => { %>
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h4 class="card-title"><%= films.nom%></h4>
+                    <div class="card_subtitle text_muted mb-2">
+                        par <%= films.realisateur%> - sortie le <%= films.date_de_sortie%> <br>
+
+                        <% if(films.statut == 'non-vu') {%>
+                            statut: <%= films.statut%>
+                        <% } else { %>
+                            <%= films.statut%> le <%= films.date_film_regarde%>
+                        <% } %>
+                    </div>
+                    <div class="card-text mb-2"><%= films.description%></div>
+                    <a href="films/<%= films.id %>" class="btn btn-primary">Afficher</a>
+                    <form action="/films/<% films.id %>?_method=DELETE" method="POST" class="d-inline">
+                        <button type="submit" class="btn btn-danger">Supprimer</button>
+                    </form>
+                </div>
+            </div>
+        <% })%>
+    </div>
+</body>
+</html>

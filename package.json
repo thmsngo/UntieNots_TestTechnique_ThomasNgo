@@ -1,0 +1,31 @@
+{
+  "name": "UntieNots_TestTechnique_ThomasNgo",
+  "version": "1.0.0",
+  "description": "Réalisation d’un site web qui permet d’enregistrer des informations concernant des films et qui proposera certaines fonctionnalités.",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thmsngo/UntieNots_TestTechnique_ThomasNgo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thmsngo/UntieNots_TestTechnique_ThomasNgo/issues"
+  },
+  "homepage": "https://github.com/thmsngo/UntieNots_TestTechnique_ThomasNgo#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "marked": "^2.0.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.11.17",
+    "slugify": "^1.4.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
