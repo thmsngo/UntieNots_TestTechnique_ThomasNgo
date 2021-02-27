@@ -26,10 +26,10 @@
                         <% } %>
                     </div>
                     <div class="card-text mb-2"><%= films.description%></div>
-                    <a href="films/<%= films.id %>" class="btn btn-primary">Afficher</a>
-                    <form action="/films/<% films.id %>?_method=DELETE" method="POST" class="d-inline">
-                        <button type="submit" class="btn btn-danger">Supprimer</button>
-                    </form>
+                    <a href="films/<%= films.slug %>" class="btn btn-primary">Afficher</a>
+                    
+                    <form action="/films/<%= films.id %>?_method=DELETE" method="POST" class="d-inline">
+                        <button type="submit" class="btn btn-danger">Supprimer</button></form>
                 </div>
             </div>
         <% })%>
